@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 20px 30px;
+  background-color: #b38d97;
+  color: azure;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 1px;
+
+  &__logo {
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__menu {
+    cursor: pointer;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    justify-items: center;
+  }
+}
+
+.main {
+  --column-width: 200px;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+
+  grid-template-columns: var(--column-width) 1fr var(--column-width);
+  grid-template-rows: 80px 200px 1fr 80px;
+
+  &::before {
+    content: '';
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    background-color: #dde1e4;
+  }
+
+  &__document {
+    padding: 120px 80px;
+    margin: 0 auto;
+    min-height: 1200px;
+    max-width: 1000px;
+    grid-row: 2/4;
+    grid-column: 2/3;
+
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .document {
+    &__info {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ccc;
+      margin-bottom: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      span {
+        border-radius: 50%;
+        background-color: #ccc;
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        margin: 0 6px;
+      }
+    }
+
+    &__title {
+      font-size: 34px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 40px;
+    }
+
+    &__block {
+      font-size: 18px;
+      font-weight: 300;
+      color: #000;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.footer {
+  padding: 20px 30px;
+  background-color: #b38d97;
+  color: azure;
+  font-size: 18px;
+}
